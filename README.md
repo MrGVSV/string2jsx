@@ -38,6 +38,22 @@ let conversion = [
 
 
 
+## Installation
+
+Install the module using [NPM](https://www.npmjs.com/get-npm):
+
+```bash
+npm i string2jsx
+```
+
+Then simply import it with:
+
+```javascript
+import String2JSX from 'string2JSX'
+```
+
+
+
 ## Documentation
 
 ### Props
