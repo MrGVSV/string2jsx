@@ -1,48 +1,48 @@
 {
-  "name": "string2jsx",
-  "version": "0.0.1",
-  "description": "Convert a string to JSX Elements",
-  "main": "index.js",
-  "types": "src/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "updateSnapshots": "npm test -- -u"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MrGVSV/string2jsx.git"
-  },
-  "keywords": [
-    "jsx",
-    "react",
-    "convert",
-    "parse"
-  ],
-  "author": "Gino Valente",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MrGVSV/string2jsx/issues"
-  },
-  "homepage": "https://github.com/MrGVSV/string2jsx#readme",
-  "dependencies": {
-    "react": "^16.13.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
-    "@testing-library/react": "^10.0.2",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.11.1",
-    "@types/react": "^16.9.34",
-    "@types/react-test-renderer": "^16.9.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^25.3.0",
-    "jest": "^25.3.0",
-    "react-test-renderer": "^16.13.1",
-    "ts-jest": "^25.3.1",
-    "typescript": "^3.8.3"
-  }
+	"name": "string2jsx",
+	"version": "0.0.2",
+	"description": "Convert a string to JSX Elements",
+	"main": "index.js",
+	"types": "src/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest",
+		"updateSnapshots": "npm test -- -u"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrGVSV/string2jsx.git"
+	},
+	"keywords": [
+		"jsx",
+		"react",
+		"convert",
+		"parse"
+	],
+	"author": "Gino Valente",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MrGVSV/string2jsx/issues"
+	},
+	"homepage": "https://github.com/MrGVSV/string2jsx#readme",
+	"dependencies": {
+		"react": "^16.13.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/plugin-transform-modules-commonjs": "^7.9.0",
+		"@babel/preset-env": "^7.9.5",
+		"@babel/preset-react": "^7.9.4",
+		"@testing-library/react": "^10.0.2",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.11.1",
+		"@types/react": "^16.9.34",
+		"@types/react-test-renderer": "^16.9.2",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-jest": "^25.3.0",
+		"jest": "^25.3.0",
+		"react-test-renderer": "^16.13.1",
+		"ts-jest": "^25.3.1",
+		"typescript": "^3.8.3"
+	}
 }
