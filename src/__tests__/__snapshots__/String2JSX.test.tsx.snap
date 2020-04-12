@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`String2JSX maintains props 1`] = `
+Array [
+  <span>
+    Goodbye
+  </span>,
+  <span
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  >
+    , world
+  </span>,
+  <span
+    className="kinda-dark-tbh"
+  >
+    ...
+  </span>,
+]
+`;
+
+exports[`String2JSX renders correctly 1`] = `
+Array [
+  <span>
+    Goodbye
+  </span>,
+  <span>
+    , world
+  </span>,
+  <span>
+    ...
+  </span>,
+]
+`;
+
+exports[`String2JSX returns default "Hello, world!" 1`] = `"Hello, world!"`;
