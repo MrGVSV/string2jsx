@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Convert a string to JSX Elements",
   "main": "index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
