@@ -1,4 +1,6 @@
 # String2JSX
+[![npm version](https://badge.fury.io/js/string2jsx.svg)](https://badge.fury.io/js/string2jsx)
+
 String2JSX converts an input string into a JSX Element. For an approach that does not return a Fragment or that has more control over its matches, try using [react-process-string](https://github.com/EfogDev/react-process-string).
 
 
