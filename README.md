@@ -42,7 +42,7 @@ let conversion = [
 
 | Required Props | Type                | Description                                                  |
 | -------------- | ------------------- | ------------------------------------------------------------ |
-| children       | `string | string[]` | Contains the string (or array of strings) to be converted.   |
+| children       | `string` or `string[]` | Contains the string (or array of strings) to be converted.   |
 | map            | `object`            | Contains all of the conversion mappins and their respective options. |
 
 ### Map Options
@@ -50,7 +50,7 @@ let conversion = [
 | Key         | Type                   | Required | Description                                                  |
 | ----------- | ---------------------- | -------- | ------------------------------------------------------------ |
 | from        | `RegExp`               | yes      | The regex used to find all matches within the string.        |
-| to          | `JSX.Element | string` | yes      | The JSX Element to replace any found matches.                |
+| to          | `JSX.Element` or `string` | yes      | The JSX Element to replace any found matches.                |
 | props       | `object`               | no       | The props to pass to the new JSX Element (these can also go on the given "to" element). <br /><br />Defaults to `{}`. |
 | isChild     | `boolean`              | no       | Sets the match (or the specified matchGroup) as the new JSX Element's "children" prop.<br /><br />Defaults to `false`. |
 | useForProps | `string[]`             | no       | Sets the match (or the specified matchGroup) to each  prop in this list for the new JSX Element.<br /><br />Defaults to `[]`. |
