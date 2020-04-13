@@ -63,6 +63,7 @@ import String2JSX from 'string2JSX'
 | children       | `string` or `string[]` | yes | Contains the string (or array of strings) to be converted. |
 | map            | `object`            | yes         | Contains all of the conversion mappins and their respective options. |
 | parent | `JSX.Element` | no | Contains the conversions in the given parent element. Props on the given element will be maintained. Any props passed to the `String2JSX` element will be passed to this parent.<br /><br />Defaults to `React.Fragment`. |
+| defaultMatchGroup | `number` | no | Overrides all maps to default to the given regex match group.<br /><br />Defaults to `0`. |
 
 ### Map Options
 
@@ -73,5 +74,5 @@ import String2JSX from 'string2JSX'
 | props       | `object`               | no       | The props to pass to the new JSX Element (these can also go on the given "to" element). <br /><br />Defaults to `{}`. |
 | isChild     | `boolean`              | no       | Sets the match (or the specified matchGroup) as the new JSX Element's "children" prop.<br /><br />Defaults to `false`. |
 | useForProps | `string[]`             | no       | Sets the match (or the specified matchGroup) to each  prop in this list for the new JSX Element.<br /><br />Defaults to `[]`. |
-| matchGroup  | `number`               | no       | Specifies the regex match group to use for the above options.<br /><br />Defaults to `0`. |
+| matchGroup  | `number`               | no       | Specifies the regex match group to use for the above options.<br /><br />Defaults to `defaultMatchGroup`. |
 

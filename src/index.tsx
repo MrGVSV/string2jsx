@@ -11,9 +11,10 @@ interface IMap {
 interface IString2JSX extends HTMLAttributes<HTMLElement> {
     map: IMap[];
     parent?: JSX.Element;
+    defaultMatchGroup: number;
 }
 
-export default function String2JSX({ map=[], parent, children, ...etc }: IString2JSX) {
+export default function String2JSX({ map=[], parent, defaultMatchGroup=0, children, ...etc }: IString2JSX) {
 
     // The elements to return
     let elements: (string | JSX.Element)[] = []
@@ -69,7 +70,7 @@ export default function String2JSX({ map=[], parent, children, ...etc }: IString
                     let jsxElt = typeof jsxMap.to !== 'string' ? jsxMap.to : <span children={jsxMap.to} />;
                     // Add specified props (if any)
                     let newProps: {[key: string]: any} = {...jsxElt.props, ...jsxMap.props}
-                    jsxMap.useForProps?.map(key => newProps[key] = match![jsxMap.matchGroup??0]);
+                    jsxMap.useForProps?.map(key => newProps[key] = match![jsxMap.matchGroup??defaultMatchGroup]);
                     // Push the new element
                     newElements.push(<jsxElt.type {...newProps} />);
 
