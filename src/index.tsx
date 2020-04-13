@@ -11,7 +11,7 @@ interface IMap {
 interface IString2JSX extends HTMLAttributes<HTMLElement> {
     map: IMap[];
     parent?: JSX.Element;
-    defaultMatchGroup: number;
+    defaultMatchGroup?: number;
 }
 
 export default function String2JSX({ map=[], parent, defaultMatchGroup=0, children, ...etc }: IString2JSX) {

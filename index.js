@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-function String2JSX({ map = [], children, ...etc }) {
+function String2JSX({ map = [], parent, defaultMatchGroup = 0, children, ...etc }) {
     var _a;
     // The elements to return
     let elements = [];
@@ -55,7 +55,7 @@ function String2JSX({ map = [], children, ...etc }) {
                     let jsxElt = typeof jsxMap.to !== 'string' ? jsxMap.to : react_1.default.createElement("span", { children: jsxMap.to });
                     // Add specified props (if any)
                     let newProps = { ...jsxElt.props, ...jsxMap.props };
-                    (_a = jsxMap.useForProps) === null || _a === void 0 ? void 0 : _a.map(key => { var _a; return newProps[key] = match[(_a = jsxMap.matchGroup) !== null && _a !== void 0 ? _a : 0]; });
+                    (_a = jsxMap.useForProps) === null || _a === void 0 ? void 0 : _a.map(key => { var _a; return newProps[key] = match[(_a = jsxMap.matchGroup) !== null && _a !== void 0 ? _a : defaultMatchGroup]; });
                     // Push the new element
                     newElements.push(react_1.default.createElement(jsxElt.type, Object.assign({}, newProps)));
                     // --- Overwrite Current Text --- //
@@ -74,7 +74,9 @@ function String2JSX({ map = [], children, ...etc }) {
         // Replace Old Elements 
         elements = newElements;
     }
-    return (react_1.default.createElement(react_1.default.Fragment, Object.assign({}, etc), elements.map((item, index) => {
+    // Get Parent Element
+    const Parent = parent ? parent.type : react_1.default.Fragment;
+    return (react_1.default.createElement(Parent, Object.assign({}, parent === null || parent === void 0 ? void 0 : parent.props, etc), elements.map((item, index) => {
         var _a, _b;
         // Assign id to key if given
         let key = (_b = (_a = item.props) === null || _a === void 0 ? void 0 : _a.id) !== null && _b !== void 0 ? _b : index;
