@@ -37,3 +37,15 @@ Array [
 `;
 
 exports[`String2JSX returns default "Hello, world!" 1`] = `"Hello, world!"`;
+
+exports[`String2JSX uses the given parent 1`] = `
+<div
+  className="parent"
+>
+  Hello, 
+  <span>
+    daddy
+  </span>
+  !
+</div>
+`;

@@ -58,10 +58,11 @@ import String2JSX from 'string2JSX'
 
 ### Props
 
-| Required Props | Type                | Description                                                  |
-| -------------- | ------------------- | ------------------------------------------------------------ |
-| children       | `string` or `string[]` | Contains the string (or array of strings) to be converted.   |
-| map            | `object`            | Contains all of the conversion mappins and their respective options. |
+| Required Props | Type                | Required        | Description                                                  |
+| -------------- | ------------------- | ------------------------------------------------------------ | -------------- |
+| children       | `string` or `string[]` | yes | Contains the string (or array of strings) to be converted. |
+| map            | `object`            | yes         | Contains all of the conversion mappins and their respective options. |
+| parent | `JSX.Element` | no | Contains the conversions in the given parent element. Props on the given element will be maintained. Any props passed to the `String2JSX` element will be passed to this parent.<br /><br />Defaults to `React.Fragment`. |
 
 ### Map Options
 

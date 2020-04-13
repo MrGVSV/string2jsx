@@ -33,7 +33,7 @@ describe("String2JSX", () => {
 		expect(tree).toBe("Hello, world!");
 	});
 
-	it("maintains props", () => {
+	it('maintains props', () => {
 		let conversion = [
 			{
 				from: /Hello/,
@@ -56,5 +56,18 @@ describe("String2JSX", () => {
 			.create(<String2JSX map={conversion}>Hello, world!</String2JSX>)
 			.toJSON();
         expect(tree).toMatchSnapshot();
-	});
+    });
+    
+    it('uses the given parent', () => {
+        let conversion = [
+            {
+                from: /world/,
+                to: "daddy"
+            }
+        ]
+        const tree = renderer
+			.create(<String2JSX parent={<div className="parent" />} map={conversion}>Hello, world!</String2JSX>)
+			.toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 });

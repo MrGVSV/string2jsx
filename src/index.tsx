@@ -10,9 +10,10 @@ interface IMap {
 }
 interface IString2JSX extends HTMLAttributes<HTMLElement> {
     map: IMap[];
+    parent?: JSX.Element;
 }
 
-export default function String2JSX({ map=[], children, ...etc }: IString2JSX) {
+export default function String2JSX({ map=[], parent, children, ...etc }: IString2JSX) {
 
     // The elements to return
     let elements: (string | JSX.Element)[] = []
@@ -93,8 +94,11 @@ export default function String2JSX({ map=[], children, ...etc }: IString2JSX) {
         elements = newElements;
     }
 
+    // Get Parent Element
+    const Parent = parent ? parent.type : React.Fragment;
+
     return (
-        <React.Fragment {...etc}>
+        <Parent {...parent?.props} {...etc}>
             {
                 elements.map((item, index) => {
                     // Assign id to key if given
@@ -106,6 +110,6 @@ export default function String2JSX({ map=[], children, ...etc }: IString2JSX) {
                     )
                 })
             }
-        </React.Fragment>
+        </Parent>
     )
 }
